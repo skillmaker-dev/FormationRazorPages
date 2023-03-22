@@ -1,0 +1,26 @@
+﻿@page "{id}"
+@model Formation.Pages.DetailsModel
+@{
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Restaurant Details</h2>
+            <hr />
+            <dl class="row">
+                <dt class="col-md-2">Name:</dt>
+                <dd class="col-md-10">@Model.Restaurant.Name</dd>
+                <dt class="col-md-2">Description:</dt>
+                <dd class="col-md-10">@Model.Restaurant.Description</dd>
+            </dl>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <a asp-page="Edit" asp-route-id="@Model.Restaurant.Id" class="btn btn-primary">Edit</a>
+                    <a asp-page="List" class="btn btn-success">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

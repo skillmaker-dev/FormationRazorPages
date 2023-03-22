@@ -1,0 +1,13 @@
+﻿@page "{id}"
+@model Formation.Pages.DeleteModel
+@{
+
+}
+
+<div class="alert alert-danger" role="alert">
+    <p>Are you sure you want to delete <b>@Model.Restaurant.Name</b> ?</p>
+    <form method="post" class="d-inline-block">
+    <button type="submit" class="btn btn-danger">Yes</button>
+    </form>
+    <button class="btn btn-primary"><a asp-page="list" class="text-white text-decoration-none">No</a></button>
+</div>

@@ -1,0 +1,36 @@
+﻿@page
+@model Formation.Pages.CreateModel
+@{
+}
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Add Restaurant</h2>
+            <hr />
+            <form  class="form-horizontal" method="post">
+                <div class="form-group">
+                    <label asp-for="@Model.Restaurant.Name" class="control-label col-md-2">Name:</label>
+                    <div class="col-md-10">
+                        <input asp-for="@Model.Restaurant.Name" class="form-control" />
+                        <span asp-validation-for="@Model.Restaurant.Name" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.Restaurant.Description" class="control-label col-md-2">Description:</label>
+                    <div class="col-md-10">
+                        <textarea asp-for="@Model.Restaurant.Description" class="form-control"></textarea>
+                        <span asp-validation-for="@Model.Restaurant.Description" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button type="submit" class="btn btn-primary mt-2">Add Restaurant</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
